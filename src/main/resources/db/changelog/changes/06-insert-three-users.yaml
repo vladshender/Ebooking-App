@@ -1,0 +1,69 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-admin
+      author: vshender
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: admin@example.com
+              - column:
+                  name: password
+                  value: $2a$10$F4Rhzy5/dihln8SvsU7GSOIwxg5ZkipciDRromyzBS1aRbTC6Do6u
+              - column:
+                  name: first_name
+                  value: Admin
+              - column:
+                  name: last_name
+                  value: Admin
+              - column:
+                  name: is_deleted
+                  value: 0
+
+  - changeSet:
+      id: create-user-bob
+      author: vshender
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: bob@example.com
+              - column:
+                  name: password
+                  value: $2a$10$e5hC888LH7SrukD5pCtKVe7zBXpy2b6Gt7/ECmozM6.wmCe75VzJS
+              - column:
+                  name: first_name
+                  value: Bob
+              - column:
+                  name: last_name
+                  value: User
+              - column:
+                  name: is_deleted
+                  value: 0
+
+  - changeSet:
+      id: create-user-alice
+      author: vshender
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: email
+                  value: alice@example.com
+              - column:
+                  name: password
+                  value: $2a$10$e5hC888LH7SrukD5pCtKVe7zBXpy2b6Gt7/ECmozM6.wmCe75VzJS
+              - column:
+                  name: first_name
+                  value: Alice
+              - column:
+                  name: last_name
+                  value: User
+              - column:
+                  name: is_deleted
+                  value: 0
